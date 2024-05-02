@@ -3,7 +3,7 @@ const moves = ["rock", "paper", "scissors"];
 
 //Accept a move from the user.
 function getUserChoice(){
-    var usermove;
+    let usermove;
     do {
         usermove = prompt("Enter your choice (Rock | Paper | Scissors): ").toLowerCase();
     } while (!moves.includes(usermove)); 
@@ -12,15 +12,14 @@ function getUserChoice(){
 
 //Funtion to get random move from array of moves for the computer's choice.
 function getComputerChoice(){
-    var random = moves[Math.floor(Math.random() * moves.length)];
-    return random;
+    return moves[Math.floor(Math.random() * moves.length)];
 }
 
 //Store the user choice in "playerSelection" variable.
-var playerSelection = getUserChoice();
+// var playerSelection = getUserChoice();
 
 //Store the computer choice in "computerSelection" variable.
-var computerSelection = getComputerChoice();
+// var computerSelection = getComputerChoice();
 
 //Round Results.
 const winByRock = "You win! Rock crushes scissors."

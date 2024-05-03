@@ -3,11 +3,11 @@ const moves = ["rock", "paper", "scissors"];
 
 //Accept a move from the user.
 // function getUserChoice(){
-// let usermove;
-// do {
-//     usermove = prompt("Enter your choice (Rock | Paper | Scissors): ").toLowerCase();
-// } while (!moves.includes(usermove)); 
-// return usermove;
+//     var usermove;
+//     do {
+//         usermove = prompt("Enter your choice (Rock | Paper | Scissors): ").toLowerCase();
+//     } while (!moves.includes(usermove)); 
+//     return usermove;
 // }
 
 //Funtion to get random move from array of moves for the computer's choice.

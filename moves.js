@@ -2,13 +2,13 @@
 const moves = ["rock", "paper", "scissors"];
 
 //Accept a move from the user.
-function getUserChoice(){
-    let usermove;
-    do {
-        usermove = prompt("Enter your choice (Rock | Paper | Scissors): ").toLowerCase();
-    } while (!moves.includes(usermove)); 
-    return usermove;
-}
+// function getUserChoice(){
+// let usermove;
+// do {
+//     usermove = prompt("Enter your choice (Rock | Paper | Scissors): ").toLowerCase();
+// } while (!moves.includes(usermove)); 
+// return usermove;
+// }
 
 //Funtion to get random move from array of moves for the computer's choice.
 function getComputerChoice(){
@@ -33,69 +33,64 @@ const tie = "You both chose the same. You both are tied. Try again!";
 //Function to play a round and display results 
 function playRound(playerSelection, computerSelection){    
     if(playerSelection === "rock" && computerSelection === "scissors"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(winByRock)
+        return winByRock
     }
     else if(playerSelection === "rock" && computerSelection === "paper"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(loseByRock)
+        return loseByRock
     }
     else if(playerSelection === "paper" && computerSelection === "rock"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(winByPaper)
+        return winByPaper
     }
     else if(playerSelection === "paper" && computerSelection === "scissors"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(loseByPaper)
+        return loseByPaper
     }
     else if(playerSelection === "scissors" && computerSelection === "paper"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(winByScissors)
+        return winByScissors
     }
     else if(playerSelection === "scissors" && computerSelection === "rock"){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(loseByScissors)
+        return loseByScissors
     }
     else if(playerSelection === computerSelection){
-        alert(`Player chose: ${playerSelection} and Computer chose: ${computerSelection}`);
-        alert(tie)
+        return tie
     }
     else{
-        alert("Invalid Input!")
+        return "Invalid Input!"
     }
 }
+
+export {moves, getComputerChoice, playRound};
 
 //Function to create the game where rounds are best of five.
-function playGame(){
-    let playerWins = 0;
-    let playerLoses = 0;
-    let ties = 0;
+// function playGame(){
+//     let playerWins = 0;
+//     let playerLoses = 0;
+//     let ties = 0;
 
-    for(let i=0; i < 5; i++){
-        let playerSelection = getUserChoice();
-        console.log(playerSelection);
-        let computerSelection = getComputerChoice();
-        console.log(computerSelection);
-        playRound(playerSelection, computerSelection);
+//     for(let i=0; i < 5; i++){
+//         let playerSelection = getUserChoice();
+//         console.log(playerSelection);
+//         let computerSelection = getComputerChoice();
+//         console.log(computerSelection);
+//         playRound(playerSelection, computerSelection);
         
-        if(playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper"){
-                playerWins++;
-        } else if(playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock"){
-            playerLoses++;
-        } else{
-            ties++;
-        }
-    }
+//         if(playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper"){
+//                 playerWins++;
+//         } else if(playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock"){
+//             playerLoses++;
+//         } else{
+//             ties++;
+//         }
+//     }
 
-    if(playerWins > playerLoses){
-        alert("You won the series!")
-    } else if(playerWins < playerLoses) {
-        alert("You lost the series.")
-    } else {
-        alert("Series Tied!")
-    }
+//     if(playerWins > playerLoses){
+//         alert("You won the series!")
+//     } else if(playerWins < playerLoses) {
+//         alert("You lost the series.")
+//     } else {
+//         alert("Series Tied!")
+//     }
 
-    alert(`Player wins: ${playerWins} | Player losses: ${playerLoses}. | Player Ties: ${ties}`);
-}
+//     alert(`Player wins: ${playerWins} | Player losses: ${playerLoses}. | Player Ties: ${ties}`);
+// }
 
-playGame();
+// playGame();

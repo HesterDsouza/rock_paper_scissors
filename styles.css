@@ -1,0 +1,104 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gameContainer h1{
+    color: #0b4618;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+}
+
+.selectButton{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select{
+    font-size: 20px;
+    color: #037c23;
+}
+
+.playerMove, .compMove, .roundResult, .seriesResult{
+    font-size: 18px;
+    color: #184678;
+}
+
+.buttons{
+    display: flex;
+    width: max-content;
+    gap: 10px;
+}
+
+.gameButton{
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gameButton#rock{
+    background-color: gray;
+}
+
+.gameButton#rock:hover{
+    background-color: rgba(128, 128, 128, 0.632);
+}
+
+.gameButton#paper{
+    background-color: rgb(165, 228, 216);
+}
+
+.gameButton#paper:hover{
+    background-color: rgb(165, 228, 216, 0.632);
+}
+
+.gameButton#scissors{
+    background-color: orange;
+}
+
+.gameButton#scissors:hover{
+    background-color: rgba(255, 166, 0, 0.632);
+}
+
+.MovesnResults .moves, .results, .score .scoreSheet{
+    font-weight: bold;
+    font-size: 25px;
+    color: #0b4618;
+    display: flex;
+    margin-bottom: -10px;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.resetBtn{
+    color: #efecec;
+    background-color: #03952a;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    width: max-content;
+    cursor: pointer;
+}
+
+.resetBtn:hover{
+    background-color: #0b4618;
+}

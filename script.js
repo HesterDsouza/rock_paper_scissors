@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
             compMoveDisplay.textContent = `Player Move: ${computerSelection}`;
 
             const roundResult = playRound(playerSelection, computerSelection);
-            roundResultDisplay.textContent = `Roud Result: ${roundResult}`;
+            roundResultDisplay.textContent = `Round Result: ${roundResult}`;
 
             if (roundResult.includes("win")){
                 playerWins++;

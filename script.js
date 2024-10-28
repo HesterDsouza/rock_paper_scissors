@@ -2,12 +2,12 @@ import {moves, getComputerChoice, playRound} from './moves.js';
 
 document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll(".gameButton");
-    const playerMoveDisplay = document.querySelector((".playerMove"))
-    const compMoveDisplay = document.querySelector((".compMove"))
-    const roundResultDisplay = document.querySelector((".roundResult"))
-    const seriesResultDisplay = document.querySelector((".seriesResult"))
-    const scoreDisplay = document.querySelector(".scoreSheet")
-    const resetButton = document.querySelector(".resetBtn")
+    const playerMoveDisplay = document.querySelector(".playerMove");
+    const compMoveDisplay = document.querySelector(".compMove");
+    const roundResultDisplay = document.querySelector(".roundResult");
+    const seriesResultDisplay = document.querySelector(".seriesResult");
+    const scoreDisplay = document.querySelector(".scoreSheet");
+    const resetButton = document.querySelector(".resetBtn");
 
     let playerWins = 0;
     let computerWins = 0;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
             const computerSelection = getComputerChoice();
 
             playerMoveDisplay.textContent = `Player Move: ${playerSelection}`;
-            compMoveDisplay.textContent = `Player Move: ${computerSelection}`;
+            compMoveDisplay.textContent = `Computer Move: ${computerSelection}`;
 
             const roundResult = playRound(playerSelection, computerSelection);
             roundResultDisplay.textContent = `Round Result: ${roundResult}`;

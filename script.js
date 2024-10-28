@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
             const computerSelection = getComputerChoice();
 
             playerMoveDisplay.textContent = `Player Move: ${playerSelection}`;
-            compMoveDisplay.textContent = `Player Move: ${computerSelection}`;
+            compMoveDisplay.textContent = `Computer Move: ${computerSelection}`;
 
             const roundResult = playRound(playerSelection, computerSelection);
             roundResultDisplay.textContent = `Round Result: ${roundResult}`;
